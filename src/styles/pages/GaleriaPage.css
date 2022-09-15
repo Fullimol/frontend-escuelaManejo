@@ -1,8 +1,11 @@
-.titu-novedades {
+.galeria {
+    padding: 20px 40px 0px 40px;
+}
+
+.galeria h3 {
     font-size: 35px;
     font-style: italic;
     letter-spacing: 30px;
     text-align: center;
     padding-bottom: 20px;
-    font-weight: 400;
 }

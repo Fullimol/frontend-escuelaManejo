@@ -1,5 +1,5 @@
 import React from 'react';
-import '././styles/layout/Header.css';  // ESTE STYLE NO FUNCIONA
+import '../../styles/layout/Header.css';
 
 const Header = (props) => {
     return (

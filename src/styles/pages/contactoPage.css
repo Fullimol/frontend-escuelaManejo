@@ -1,0 +1,74 @@
+.titu-contacto {
+    font-size: 35px;
+    font-style: italic;
+    letter-spacing: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contenedor-contactos {
+    display: flex;
+    gap: 24px;
+    margin: 20px 80px;
+}
+
+.contacto {
+    background-color: #bbb;
+    width: 70%;
+}
+
+.datos {
+    background-color: #bbb;
+    width: 30%;
+}
+
+.datos img {
+    width: 100%;
+    padding: 5px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto h3 {
+    font-size: 40px;
+    margin: 30px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 600;
+}
+
+.formulario p {
+    display: flex;
+}
+
+.formulario p label {
+    min-width: 80px;
+}
+
+.formulario i {
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+.formulario textarea {
+    resize: none;
+}
+
+.datos h2 {
+    font-size: 30px;
+    margin: 10px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 300;
+}
+
+.datos p {
+    margin: 20px;
+}

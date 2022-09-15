@@ -1,0 +1,79 @@
+.trayectoria {
+    display: block;
+    background-color: #bbb;
+    width: 45%;
+    padding: 12px;
+}
+
+.objetivo {
+    display: block;
+    background-color: #bbb;
+    width: 45%;
+    padding: 12px;
+}
+
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.info h3 {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+    font-style: italic;
+}
+
+.info p {
+    font-size: 18px;
+    padding: 0 50px;
+    font-style: italic;
+}
+
+.staff h3 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 80px;
+    font-style: italic;
+}
+
+.personas {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.persona {
+    margin: 10px;
+    width: 70%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.persona:hover {
+    transition: 0.3s;
+    background-color: #bbb;
+    transform: scale(1.10);
+}
+
+
+.persona img {
+    display: flex;
+    border-radius: 50%;
+    margin: 20px auto;
+    justify-content: center;
+    border: 5px solid darkred;
+}
+
+.persona h5 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.persona p {
+    padding: 0 20px;
+}

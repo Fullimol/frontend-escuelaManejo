@@ -1,8 +1,11 @@
 import React from 'react';
+import '../../styles/layout/Footer.css';
 
 const Footer = (props) => {
     return (
-        <div>Footer</div>
+        <footer>
+            <p>Diseñado por Bruno Freijomil - 2022</p>
+        </footer>
     );
 }
 
