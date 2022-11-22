@@ -1,33 +1,38 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import NovedadItem from '../components/novedades/NovedadItem';
+
 import '../styles/pages/NovedadesPage.css';
 
+// esto es lo que traigo del backend, la API que cree con "express" en el backend
 const NovedadesPage = (props) => {
-    return (
-        <main>
-            <h2 className="titu-novedades"><span>N</span>ovedades</h2>
-            <div className="novedades">
-                <h3>Titulo</h3>
-                <h4>Subtitulo</h4>
-                <p>descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion
-                    descripcion descripcion descripcion descripcion</p>
-                <hr></hr>
-            </div>
-            <div className="novedades">
-                <h3>Titulo</h3>
-                <h4>Subtitulo</h4>
-                <p>descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion
-                    descripcion descripcion descripcion descripcion</p>
-                <hr></hr>
-            </div>
-            <div className="novedades">
-                <h3>Titulo</h3>
-                <h4>Subtitulo</h4>
-                <p>descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion
-                    descripcion descripcion descripcion descripcion</p>
-                <hr></hr>
-            </div>
-        </main>
-    )
 
+    const [loading, setLoading] = useState(false);
+    const [novedades, setNovedades] = useState([]);
+
+    useEffect(() => {
+        const cargarNovedades = async () => {
+            setLoading(true);
+            const response = await axios.get('http://localhost:3000/api/novedades');
+            setNovedades(response.data)
+            setLoading(false);
+        };
+        cargarNovedades();
+    }, []);
+
+    return (
+        <section className='novedades'>
+            <h1 className="titu-novedades"><span>N</span>ovedades</h1>
+            {loading ? (
+                <p>Cargando...</p>
+            ) : (
+                novedades.map(item => <NovedadItem key={item.id}
+                    title={item.titulo} subtitle={item.subtitulo}
+                    imagen={item.imagen} body={item.cuerpo} />)
+            )}
+        </section>
+    );
 }
+
 
 export default NovedadesPage;
